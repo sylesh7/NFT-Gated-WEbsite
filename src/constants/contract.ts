@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0xe8b01675de963f5f6b62248332bdcaa32138d5a6";
+export const CONTRACT_ADDRESS = "0x940af78367bfb98fa16a6f1b1b762c9ae8886744";
 
 export const CONTRACT_ABI = [
     [
@@ -448,6 +448,25 @@ export const CONTRACT_ABI = [
             "inputs": [
                 {
                     "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                }
+            ],
+            "name": "hasNFT",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
                     "name": "owner",
                     "type": "address"
                 },
@@ -458,6 +477,30 @@ export const CONTRACT_ABI = [
                 }
             ],
             "name": "isApprovedForAll",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "user",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "tokenId",
+                    "type": "uint256"
+                }
+            ],
+            "name": "isOwnerOf",
             "outputs": [
                 {
                     "internalType": "bool",
@@ -565,5 +608,5 @@ export const CONTRACT_ABI = [
             "type": "function"
         }
     ]
-
+    
 ];
