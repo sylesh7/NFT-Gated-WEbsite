@@ -54,5 +54,3 @@ export default tseslint.config({
 })
 ```
 =======
-# trial
->>>>>>> 98606c12e5b1438daab3428b58e67e3d76d06a7d

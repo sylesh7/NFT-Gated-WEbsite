@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "../constants/contract";
+import { InterfaceAbi } from "ethers";
 
 export const checkNFTOwnership = async (walletAddress: string): Promise<boolean> => {
   try {
@@ -7,7 +8,7 @@ export const checkNFTOwnership = async (walletAddress: string): Promise<boolean>
       throw new Error("Ethereum provider is not available");
     }
     const provider = new ethers.BrowserProvider(window.ethereum);
-    const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, provider);
+    const contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI as InterfaceAbi, provider);
 
     const balance = await contract.balanceOf(walletAddress);
     return balance > 0;
@@ -15,4 +16,4 @@ export const checkNFTOwnership = async (walletAddress: string): Promise<boolean>
     console.error("Error checking NFT ownership:", error);
     return false;
   }
-};
+};  

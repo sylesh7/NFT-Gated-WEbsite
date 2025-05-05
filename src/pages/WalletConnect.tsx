@@ -13,9 +13,9 @@ const ConnectWallet = () => {
     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
     const walletAddress = accounts[0];
 
-    const ownsNFT = await checkNFTOwnership(walletAddress);
+    const hasNFT = await checkNFTOwnership(walletAddress);
 
-    if (ownsNFT) {
+    if (hasNFT) {
       navigate("/home");
     } else {
       alert("Access Denied: You do not own the required NFT.");
