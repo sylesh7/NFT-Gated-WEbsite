@@ -1,3 +1,4 @@
+// login.tsx
 import { useNavigate } from "react-router-dom";
 import "../Login.css";
 import { useEffect } from "react";
@@ -6,10 +7,9 @@ export default function Login() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Get the video element and set its playback speed
     const video = document.getElementById("background-video") as HTMLVideoElement;
     if (video) {
-      video.playbackRate = 0.8; // Slow down the video by 20%
+      video.playbackRate = 0.8;
     }
   }, []);
 
